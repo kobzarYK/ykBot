@@ -9,16 +9,6 @@ else
 	detected_arch := $(shell dpkg --print-architecture 2>/dev/null || amd64)
 endif
 
-#colors:
-B = \033[1;94m#   BLUE
-G = \033[1;92m#   GREEN
-Y = \033[1;93m#   YELLOW
-R = \033[1;31m#   RED
-M = \033[1;95m#   MAGENTA
-K = \033[K#       ERASE END OF LINE
-D = \033[0m#      DEFAULT
-A = \007#         BEEP
-
 APP=$(shell basename $(shell git remote get-url origin))
 REGESTRY=umanetsvitaliy
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
